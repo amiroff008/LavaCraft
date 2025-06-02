@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LavaCraft - فروشگاه رنک‌ها</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: #1a1a1a;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff6b6b, #f0932b);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-shadow: 0 0 5px #fff3b0;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px 20px 60px;
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .rank-card {
+      background: #292929;
+      border-radius: 14px;
+      box-shadow: 0 0 15px #f0932bcc;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .rank-card:hover {
+      box-shadow: 0 0 25px #ffae42cc;
+    }
+
+    .rank-header {
+      background: linear-gradient(90deg, #ff6b6b, #f0932b);
+      padding: 18px 25px;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      letter-spacing: 0.6px;
+    }
+
+    .rank-price {
+      background: #fff9db;
+      border-radius: 12px;
+      padding: 6px 14px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #f06e00;
+      box-shadow: 0 0 7px #f06e0077;
+      user-select: text;
+    }
+
+    .rank-details {
+      padding: 15px 25px;
+      background: #222222ee;
+      color: #ddd;
+      font-size: 1.1rem;
+      line-height: 1.45;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .rank-card.active .rank-details {
+      max-height: 250px;
+      padding: 15px 25px;
+    }
+
+    nav {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff6b6b, #f0932b);
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.7);
+      transition: background 0.35s ease, box-shadow 0.35s ease;
+      user-select: none;
+      letter-spacing: 0.3px;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      background: linear-gradient(90deg, #f0932b, #ff6b6b);
+      box-shadow: 0 6px 20px rgba(240, 147, 43, 0.85);
+    }
+
+    footer {
+      background: #121212;
+      text-align: center;
+      padding: 18px 10px;
+      font-size: 0.9rem;
+      color: #777;
+      user-select: none;
+      border-top: 1px solid #2c2c2c;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .rank-header {
+        font-size: 1.4rem;
+      }
+
+      .rank-price {
+        font-size: 1.1rem;
+      }
+
+      .rank-details {
+        font-size: 1rem;
+      }
+
+      nav a {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>فروشگاه رنک‌ها</h1>
+  </header>
+
+  <main>
+    <!-- رنک Elite -->
+    <div class="rank-card" tabindex="0" role="button" aria-expanded="false" aria-controls="elite-desc" onclick="toggleDetails(this)" onkeydown="if(event.key==='Enter'){toggleDetails(this)}">
+      <div class="rank-header">
+        <span>Elite</span>
+        <span class="rank-price">30,000 تومان</span>
+      </div>
+      <div class="rank-details" id="elite-desc">
+        <ul>
+          <li>دسترسی به مناطق ویژه سرور</li>
+          <li>توانایی استفاده از آیتم‌های خاص</li>
+          <li>چت رنگی</li>
+          <li>مدت زمان: یک ماه</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- رنک MVP -->
+    <div class="rank-card" tabindex="0" role="button" aria-expanded="false" aria-controls="mvp-desc" onclick="toggleDetails(this)" onkeydown="if(event.key==='Enter'){toggleDetails(this)}">
+      <div class="rank-header">
+        <span>MVP</span>
+        <span class="rank-price">50,000 تومان</span>
+      </div>
+      <div class="rank-details" id="mvp-desc">
+        <ul>
+          <li>تمام امکانات رنک Elite</li>
+          <li>دسترسی به تجهیزات اختصاصی</li>
+          <li>توانایی تلپورت به دوستان</li>
+          <li>چت رنگی پیشرفته</li>
+          <li>مدت زمان: یک ماه</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- رنک VIP -->
+    <div class="rank-card" tabindex="0" role="button" aria-expanded="false" aria-controls="vip-desc" onclick="toggleDetails(this)" onkeydown="if(event.key==='Enter'){toggleDetails(this)}">
+      <div class="rank-header">
+        <span>VIP</span>
+        <span class="rank-price">70,000 تومان</span>
+      </div>
+      <div class="rank-details" id="vip-desc">
+        <ul>
+          <li>تمام امکانات رنک MVP</li>
+          <li>دسترسی به مناطق خصوصی VIP</li>
+          <li>امکان ساخت اتاق اختصاصی</li>
+          <li>چت رنگی ویژه</li>
+          <li>مدت زمان: یک ماه</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- رنک Legend -->
+    <div class="rank-card" tabindex="0" role="button" aria-expanded="false" aria-controls="legend-desc" onclick="toggleDetails(this)" onkeydown="if(event.key==='Enter'){toggleDetails(this)}">
+      <div class="rank-header">
+        <span>Legend</span>
+        <span class="rank-price">100,000 تومان</span>
+      </div>
+      <div class="rank-details" id="legend-desc">
+        <ul>
+          <li>تمام امکانات رنک VIP</li>
+          <li>دسترسی کامل به سرور</li>
+          <li>اولویت پشتیبانی</li>
+          <li>چت رنگی لِجند</li>
+          <li>مدت زمان: یک ماه</li>
+        </ul>
+      </div>
+    </div>
+
+    <nav>
+      <a href="https://t.me/off_tor" target="_blank" rel="noopener noreferrer">برای خرید رنک به @off_tor در تلگرام پیام دهید</a>
+    </nav>
+  </main>
+
+  <footer>
+    © 2025 LavaCraft
+  </footer>
+
+  <script>
+    function toggleDetails(card) {
+      const isActive = card.classList.contains('active');
+      // فقط یک کارت باز باشه
+      document.querySelectorAll('.rank-card.active').forEach(c => {
+        c.classList.remove('active');
+        c.setAttribute('aria-expanded', 'false');
+      });
+      if (!isActive) {
+        card.classList.add('active');
+        card.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+</body>
+
+</html>
