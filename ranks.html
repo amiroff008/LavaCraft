@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>🛒 فروشگاه رنک | LavaCraft</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #1b1b1b;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      background: linear-gradient(to right, #fdcb6e, #e17055);
+      padding: 1.5rem;
+      margin: 0;
+      font-size: 2rem;
+    }
+    .rank {
+      background-color: #2d3436;
+      margin: 1.5rem auto;
+      padding: 1rem;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .rank h2 {
+      margin: 0;
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+    .rank-details {
+      display: none;
+      text-align: right;
+      margin-top: 1rem;
+      line-height: 1.8;
+      background-color: #3a3a3a;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    .rank-price {
+      margin-top: 0.5rem;
+      color: #81ecec;
+    }
+    .notice {
+      margin: 2rem auto;
+      font-size: 1rem;
+      color: #fab1a0;
+      width: 90%;
+      max-width: 600px;
+      background: #2e2e2e;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    a {
+      color: #00cec9;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🛒 فروشگاه رنک‌های LavaCraft</h1>
+
+  <div class="notice">
+    برای خرید رنک‌ها به <strong><a href="https://t.me/off_tor" target="_blank">@off_tor</a></strong> در تلگرام پیام دهید.  
+    تمام رنک‌ها <strong>یک‌ماهه</strong> هستند و قابلیت‌های ویژه دارند.
+  </div>
+
+  <!-- VIP -->
+  <div class="rank" onclick="toggle('vip')">
+    <h2>🎖 VIP - 50,000 تومان</h2>
+    <div id="vip" class="rank-details">
+      ✅ کیت اولیه ویژه  
+      ✅ رنگ اختصاصی در چت  
+      ✅ دسترسی به دستور /hat و /nick  
+      ✅ ورود سریع‌تر به سرور
+    </div>
+  </div>
+
+  <!-- MVP -->
+  <div class="rank" onclick="toggle('mvp')">
+    <h2>🥇 MVP - 80,000 تومان</h2>
+    <div id="mvp" class="rank-details">
+      ✅ تمام امکانات VIP  
+      ✅ امکان پرواز (/fly)  
+      ✅ دسترسی به کیت روزانه  
+      ✅ چت رنگی و افکت نام
+    </div>
+  </div>
+
+  <!-- Elite -->
+  <div class="rank" onclick="toggle('elite')">
+    <h2>🔥 Elite - 110,000 تومان</h2>
+    <div id="elite" class="rank-details">
+      ✅ تمام امکانات MVP  
+      ✅ خانه بیشتر (sethome)  
+      ✅ امکان ساخت بازار  
+      ✅ سرعت حرکت بالاتر  
+      ✅ تخفیف در فروشگاه آیتم‌ها
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="rank" onclick="toggle('legend')">
+    <h2>👑 Legend - 150,000 تومان</h2>
+    <div id="legend" class="rank-details">
+      ✅ همه امکانات قبلی  
+      ✅ کیت افسانه‌ای هفتگی  
+      ✅ دسترسی به منطقه VIP  
+      ✅ اولویت پشتیبانی  
+      ✅ افکت‌های اختصاصی و جذاب
+    </div>
+  </div>
+
+  <script>
+    function toggle(id) {
+      const element = document.getElementById(id);
+      element.style.display = element.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
