@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>رنک‌ها | سرور ماین‌کرفت</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: linear-gradient(270deg, #764ba2, #667eea, #ff5e62);
+      background-size: 600% 600%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      padding: 40px 20px;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: rgba(0,0,0,0.6);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .rank {
+      background: rgba(255,255,255,0.1);
+      margin: 10px 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .rank button {
+      width: 100%;
+      background: #ff5e62;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 12px;
+      text-align: right;
+      transition: background 0.3s;
+    }
+    .rank button:hover {
+      background: #e14b50;
+    }
+    .rank-content {
+      max-height: 0;
+      overflow: hidden;
+      background: rgba(0,0,0,0.4);
+      padding: 0 20px;
+      color: #eee;
+      font-size: 1em;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+    .rank-content.open {
+      padding: 15px 20px;
+      max-height: 300px; /* کافی برای متن */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>رنک‌های سرور</h2>
+
+    <div class="rank">
+      <button onclick="toggleRank('rank1')">رنک {MVP} 40 هراز تومان</button>
+      <div id="rank1" class="rank-content">
+        
+	<p>• دسترسی به قابلیت‌های ویژه داخل بازی مثل اسکین‌های اختصاصی
+	<p>• دریافت پول بیشتر هنگام انجام فعالیت‌ها
+	<p>• امکان استفاده از چت‌های رنگی و ایموجی‌های خاص
+	<p>• اولویت در ورود به سرور در زمان‌های شلوغ
+      </div>
+    </div>
+
+    <div class="rank">
+      <button onclick="toggleRank('rank2')">رنک {VIP} 70 هراز تومان</button>
+      <div id="rank2" class="rank-content">
+        <p>• تمام قابلیت‌های رنک MVP
+		<p>• دریافت جوایز روزانه و هفتگی ویژه
+		<p>• امکان استفاده از آیتم‌های کمیاب و اختصاصی در بازی
+		<p>• افزایش سرعت ساخت و تخریب بلاک‌ها
+      </div>
+    </div>
+
+    <div class="rank">
+      <button onclick="toggleRank('rank3')">رنک {Elite} 100 هراز تومان</button>
+      <div id="rank3" class="rank-content">
+        <p>• تمام قابلیت‌های رنک VIP
+		<p>• امکان ایجاد جزیره یا منطقه شخصی در سرور
+		<p>• دریافت دسترسی به ایتم‌ها و امکانات پیشرفته مثل پرواز در مناطق خاص
+		<p>• پشتیبانی ویژه و سریع‌تر از تیم سرور
+      </div>
+    </div>
+
+    <div class="rank">
+      <button onclick="toggleRank('rank4')">رنک {Legend} 150 هراز تومان</button>
+      <div id="rank4" class="rank-content">
+        <p>• تمام قابلیت‌های رنک Elite
+		<p>• آیتم‌ها و اسکین‌های اختصاصی و غیرقابل خرید دیگران
+		<p>• دسترسی کامل به تنظیمات پیشرفته در بازی و امکانات مدیریتی محدود
+		<p>• دعوت به رویدادها و مسابقات اختصاصی با جوایز ویژه
+      </div>
+    </div>
+
+    <a href="index.html" style="display: block; margin-top: 30px; text-align: center; color: white; text-decoration: none; font-weight: bold;">بازگشت به خانه</a>
+  </div>
+
+  <script>
+    function toggleRank(id) {
+      const content = document.getElementById(id);
+      if (content.classList.contains('open')) {
+        content.classList.remove('open');
+      } else {
+        // بستن همه رنک‌ها قبل از باز کردن این یکی
+        document.querySelectorAll('.rank-content.open').forEach(el => el.classList.remove('open'));
+        content.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>
+
+    <h2>برای خرید رنک به @off_tor در تلگرام پیام بدهبد</h2>
