@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,164 +10,75 @@
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: 'Vazirmatn', Tahoma, sans-serif;
-      background: #1a1a1a;
+      background: #121212;
       color: #eee;
-      display: flex;
-      flex-direction: column;
       min-height: 100vh;
-    }
-
-    header {
-      background: linear-gradient(90deg, #ff6b6b, #f0932b);
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-shadow: 0 0 5px #fff3b0;
-    }
-
-    header p {
-      margin: 8px 0 0;
-      font-size: 1.2rem;
-      color: #fff9db;
-      font-weight: 500;
-      text-shadow: 0 0 3px #00000080;
-    }
-
-    main {
-      flex-grow: 1;
-      padding: 40px 20px 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 30px;
-    }
-
-    .ip-box {
-      background: #292929;
-      padding: 25px 35px;
-      border-radius: 14px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      box-shadow: 0 0 12px #f0932bcc;
+      padding: 40px 20px;
       text-align: center;
-      max-width: 460px;
+    }
+    header {
+      background: linear-gradient(90deg, #f64f59, #c471ed, #12c2e9);
+      padding: 25px 20px;
       width: 100%;
-      letter-spacing: 1px;
-      user-select: all;
-      transition: box-shadow 0.3s ease;
-      cursor: pointer;
+      max-width: 480px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #9b59b6cc;
+      margin-bottom: 40px;
+      user-select: none;
     }
-
-    .ip-box:hover {
-      box-shadow: 0 0 20px #ffae42cc;
-    }
-
-    nav {
-      width: 100%;
-      max-width: 460px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    nav a {
-      display: block;
-      background: linear-gradient(90deg, #ff6b6b, #f0932b);
-      color: #1a1a1a;
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
       font-weight: 700;
-      font-size: 1.5rem;
-      text-align: center;
-      padding: 17px 0;
-      border-radius: 14px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.7);
-      transition: background 0.35s ease, box-shadow 0.35s ease;
-      user-select: none;
-      letter-spacing: 0.3px;
+      color: #fff;
+      text-shadow: 0 0 15px #fff;
     }
-
-    nav a:hover,
-    nav a:focus-visible {
-      background: linear-gradient(90deg, #f0932b, #ff6b6b);
-      box-shadow: 0 6px 20px rgba(240, 147, 43, 0.85);
+    main p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto 25px;
+      padding: 0 10px;
+      color: #ffb347;
+      user-select: text;
     }
-
+    main a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 700;
+    }
     footer {
-      background: #121212;
-      text-align: center;
-      padding: 18px 10px;
-      font-size: 0.95rem;
-      color: #777;
+      margin-top: auto;
+      font-size: 0.9rem;
+      color: #bbb;
       user-select: none;
-      border-top: 1px solid #2c2c2c;
+      padding-bottom: 15px;
     }
-
-    /* Responsive adjustments */
     @media (max-width: 480px) {
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
-
-      header p {
-        font-size: 1rem;
-      }
-
-      .ip-box {
-        font-size: 1.3rem;
-        padding: 20px 25px;
-      }
-
-      nav a {
-        font-size: 1.3rem;
-        padding: 14px 0;
+      main p {
+        font-size: 1.1rem;
       }
     }
   </style>
 </head>
-
 <body>
   <header>
-    <h1>🎮 LavaCraft</h1>
-    <p>تجربه‌ای متفاوت از سرور ماین‌کرفت</p>
+    <h1>سرور Minecraft <br />LavaCraft</h1>
   </header>
-
   <main>
-    <div class="ip-box" onclick="copyToClipboard()" title="کلیک برای کپی کردن آی‌پی">
-      LavaCraftSv.aternos.me:54314
-    </div>
-
-    <nav>
-      <a href="ranks.html">🛒 فروشگاه رنک‌ها</a>
-      <a href="contact.html">📞 پشتیبانی</a>
-    </nav>
+    <p>آی‌پی سرور: <strong>LavaCraftSv.aternos.me:54314</strong></p>
+    <p>برای خرید رنک‌ها به <a href="https://t.me/off_tor" target="_blank" rel="noopener noreferrer">@off_tor</a> در تلگرام پیام دهید.</p>
+    <p>کانال رسمی ما: <a href="https://t.me/Lava_Craft0" target="_blank" rel="noopener noreferrer">https://t.me/Lava_Craft0</a></p>
   </main>
-
-  <footer>
-    © 2025 LavaCraft - طراحی شده با ❤️ برای موبایل و دسکتاپ
-  </footer>
-
-  <script>
-    function copyToClipboard() {
-      const ipBox = document.querySelector('.ip-box');
-      navigator.clipboard.writeText(ipBox.textContent.trim()).then(() => {
-        ipBox.textContent = 'آی‌پی کپی شد! 🎉';
-        setTimeout(() => {
-          ipBox.textContent = 'LavaCraftSv.aternos.me:54314';
-        }, 2000);
-      });
-    }
-  </script>
+  <footer>© 2025 LavaCraft</footer>
 </body>
-
 </html>
