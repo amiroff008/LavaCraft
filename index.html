@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,10 +11,11 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: 'Vazirmatn', Tahoma, sans-serif;
-      background: #121212;
+      background: #1a1a1a;
       color: #eee;
       min-height: 100vh;
       display: flex;
@@ -21,7 +23,9 @@
       align-items: center;
       padding: 40px 20px;
       text-align: center;
+      user-select: none;
     }
+
     header {
       background: linear-gradient(90deg, #f64f59, #c471ed, #12c2e9);
       padding: 25px 20px;
@@ -30,46 +34,61 @@
       border-radius: 20px;
       box-shadow: 0 0 25px #9b59b6cc;
       margin-bottom: 40px;
-      user-select: none;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       font-weight: 700;
       color: #fff;
       text-shadow: 0 0 15px #fff;
     }
+
+    main {
+      max-width: 480px;
+      width: 100%;
+      padding: 0 15px;
+      user-select: text;
+    }
+
     main p {
       font-size: 1.3rem;
       line-height: 1.6;
-      max-width: 480px;
-      margin: 0 auto 25px;
-      padding: 0 10px;
+      margin-bottom: 25px;
       color: #ffb347;
-      user-select: text;
+      word-break: break-word;
     }
+
     main a {
       color: #fff;
-      text-decoration: underline;
       font-weight: 700;
+      text-decoration: underline;
     }
+
     footer {
       margin-top: auto;
       font-size: 0.9rem;
       color: #bbb;
-      user-select: none;
       padding-bottom: 15px;
+      user-select: none;
     }
+
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
+      body {
+        padding: 30px 15px;
       }
+
+      header h1 {
+        font-size: 2.4rem;
+      }
+
       main p {
         font-size: 1.1rem;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>سرور Minecraft <br />LavaCraft</h1>
@@ -81,4 +100,5 @@
   </main>
   <footer>© 2025 LavaCraft</footer>
 </body>
+
 </html>
