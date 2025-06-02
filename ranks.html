@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خرید رنک‌ها</title>
-    <style>
-        body {
-            background-color: #1b1b1b;
-            color: #ffffff;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .rank-box {
-            margin: 20px;
-            padding: 15px;
-            background-color: rgb(50, 150, 250);
-            border-radius: 10px;
-            cursor: pointer;
-        }
-        .details {
-            display: none;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LavaCraft | رنک‌ها</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Tahoma, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .rank {
+      border: 3px solid;
+      border-radius: 15px;
+      padding: 1rem;
+      margin: 1.5rem auto;
+      max-width: 500px;
+      cursor: pointer;
+      animation: borderColor 5s infinite;
+      transition: background 0.3s;
+    }
+    .rank:hover {
+      background-color: #222;
+    }
+    .rank-description {
+      display: none;
+      text-align: right;
+      margin-top: 1rem;
+    }
+    @keyframes borderColor {
+      0% { border-color: red; }
+      25% { border-color: orange; }
+      50% { border-color: lime; }
+      75% { border-color: cyan; }
+      100% { border-color: red; }
+    }
+  </style>
 </head>
 <body>
-    <h1>🔹 خرید رنک‌های ویژه 🔹</h1>
+  <h1>رنک‌های سرور LavaCraft</h1>
+  <p>برای خرید هر رنک به آیدی <b>@off_tor</b> در تلگرام پیام دهید.</p>
 
-    <div class="rank-box" onclick="toggleDetails('vip')">🟢 VIP - 50,000 تومان</div>
-    <div class="details" id="vip">دسترسی به سرور ویژه، آیتم‌های خاص و چت اختصاصی.</div>
+  <div class="rank" onclick="toggle('vip')">
+    <h2>🎖️ VIP - 30 هزار تومان</h2>
+    <div id="vip" class="rank-description">
+      <p>دسترسی به دستورات خاص، سرعت بیشتر، تگ ویژه در چت</p>
+    </div>
+  </div>
 
-    <div class="rank-box" onclick="toggleDetails('mvp')">🔵 MVP - 100,000 تومان</div>
-    <div class="details" id="mvp">آیتم‌های نادر، قابلیت‌های بیشتر و نام اختصاصی در سرور.</div>
+  <div class="rank" onclick="toggle('mvp')">
+    <h2>🥇 MVP - 50 هزار تومان</h2>
+    <div id="mvp" class="rank-description">
+      <p>همه مزایای VIP + امکان /fly و سرعت ساخت بیشتر</p>
+    </div>
+  </div>
 
-    <div class="rank-box" onclick="toggleDetails('elite')">🟣 Elite - 200,000 تومان</div>
-    <div class="details" id="elite">دسترسی کامل به امکانات ویژه و نقش مدیریتی.</div>
+  <div class="rank" onclick="toggle('elite')">
+    <h2>💎 Elite - 80 هزار تومان</h2>
+    <div id="elite" class="rank-description">
+      <p>مزایای MVP + دسترسی به آیتم‌های کمیاب، انبار خصوصی</p>
+    </div>
+  </div>
 
-    <div class="rank-box" onclick="toggleDetails('legend')">🔴 Legend - 500,000 تومان</div>
-    <div class="details" id="legend">ویژگی‌های کامل، شخصی‌سازی و دسترسی ویژه در سرور.</div>
+  <div class="rank" onclick="toggle('legend')">
+    <h2>👑 Legend - 120 هزار تومان</h2>
+    <div id="legend" class="rank-description">
+      <p>تمام مزایا + قابلیت ساخت منطقه امن، دعوت ویژه به ایونت‌ها</p>
+    </div>
+  </div>
 
-    <p>📩 برای خرید، به آیدی تلگرام زیر پیام دهید:</p>
-    <strong>@off_tor</strong>
-
-    <script>
-        function toggleDetails(id) {
-            var element = document.getElementById(id);
-            element.style.display = (element.style.display === "none") ? "block" : "none";
-        }
-    </script>
+  <script>
+    function toggle(id) {
+      const desc = document.getElementById(id);
+      desc.style.display = desc.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
