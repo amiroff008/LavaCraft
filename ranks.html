@@ -1,206 +1,54 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
+<html lang="fa">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LavaCraft - رنک‌ها</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Vazirmatn', Tahoma, sans-serif;
-      background: #1a1a1a;
-      color: #eee;
-      min-height: 100vh;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      user-select: none;
-    }
-
-    header {
-      background: linear-gradient(90deg, #ff6b6b, #f0932b);
-      padding: 25px 20px;
-      width: 100%;
-      max-width: 480px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px #ff6b6bcc;
-      margin-bottom: 40px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 0 0 12px #fff3b0;
-    }
-
-    main {
-      width: 100%;
-      max-width: 480px;
-      user-select: text;
-    }
-
-    .rank-container {
-      margin-bottom: 20px;
-      border-radius: 15px;
-      padding: 15px 20px;
-      background: #222;
-      box-shadow: 0 0 15px #000000bb;
-      cursor: pointer;
-      border: 3px solid transparent;
-      transition: border-color 0.3s ease;
-      user-select: none;
-    }
-
-    .rank-container:hover {
-      border-color: #fff;
-    }
-
-    .rank-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      user-select: text;
-    }
-
-    .price {
-      font-size: 1.5rem;
-      color: #ffd700;
-      margin-bottom: 8px;
-      user-select: text;
-    }
-
-    .features {
-      font-size: 1.2rem;
-      color: #ccc;
-      display: none;
-      text-align: right;
-      line-height: 1.6;
-      user-select: text;
-    }
-
-    /* رنگ حاشیه RGB برای هر رنک */
-    .elite {
-      border-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3) 1;
-    }
-
-    .mvp {
-      border-image: linear-gradient(45deg, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff) 1;
-    }
-
-    .vip {
-      border-image: linear-gradient(45deg, #ff1493, #ff69b4, #ffc0cb) 1;
-    }
-
-    .legend {
-      border-image: linear-gradient(45deg, #00ff00, #7fff00, #ffff00) 1;
-    }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 30px 15px;
-      }
-
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      .rank-title {
-        font-size: 1.4rem;
-      }
-
-      .price {
-        font-size: 1.2rem;
-      }
-
-      .features {
-        font-size: 1rem;
-      }
-    }
-  </style>
-  <script>
-    function toggleFeatures(id) {
-      const el = document.getElementById(id);
-      if (el.style.display === 'block') {
-        el.style.display = 'none';
-      } else {
-        el.style.display = 'block';
-      }
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خرید رنک‌ها</title>
+    <style>
+        body {
+            background-color: #1b1b1b;
+            color: #ffffff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .rank-box {
+            margin: 20px;
+            padding: 15px;
+            background-color: rgb(50, 150, 250);
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .details {
+            display: none;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <h1>رنک‌های LavaCraft</h1>
-  </header>
-  <main>
-    <div class="rank-container elite" onclick="toggleFeatures('elite-features')">
-      <div class="rank-title">Elite</div>
-      <div class="price">۱۵ هزار تومان / ۱ ماه</div>
-      <div id="elite-features" class="features">
-        <ul>
-          <li>دسترسی به آیتم‌های پایه سرور</li>
-          <li>چت رنگی</li>
-          <li>توانایی ساخت خانه</li>
-        </ul>
-      </div>
-    </div>
+    <h1>🔹 خرید رنک‌های ویژه 🔹</h1>
 
-    <div class="rank-container mvp" onclick="toggleFeatures('mvp-features')">
-      <div class="rank-title">MVP</div>
-      <div class="price">۳۰ هزار تومان / ۱ ماه</div>
-      <div id="mvp-features" class="features">
-        <ul>
-          <li>همه قابلیت‌های Elite</li>
-          <li>دسترسی به آیتم‌های اختصاصی بیشتر</li>
-          <li>پوشش ویژه در چت</li>
-          <li>توانایی ایجاد جزیره خصوصی</li>
-        </ul>
-      </div>
-    </div>
+    <div class="rank-box" onclick="toggleDetails('vip')">🟢 VIP - 50,000 تومان</div>
+    <div class="details" id="vip">دسترسی به سرور ویژه، آیتم‌های خاص و چت اختصاصی.</div>
 
-    <div class="rank-container vip" onclick="toggleFeatures('vip-features')">
-      <div class="rank-title">VIP</div>
-      <div class="price">۵۰ هزار تومان / ۱ ماه</div>
-      <div id="vip-features" class="features">
-        <ul>
-          <li>همه قابلیت‌های MVP</li>
-          <li>دسترسی به سرورهای خصوصی</li>
-          <li>ابزارهای افزایش سرعت بازی</li>
-          <li>جایگاه ویژه در لیست بازیکنان</li>
-        </ul>
-      </div>
-    </div>
+    <div class="rank-box" onclick="toggleDetails('mvp')">🔵 MVP - 100,000 تومان</div>
+    <div class="details" id="mvp">آیتم‌های نادر، قابلیت‌های بیشتر و نام اختصاصی در سرور.</div>
 
-    <div class="rank-container legend" onclick="toggleFeatures('legend-features')">
-      <div class="rank-title">Legend</div>
-      <div class="price">۸۰ هزار تومان / ۱ ماه</div>
-      <div id="legend-features" class="features">
-        <ul>
-          <li>همه قابلیت‌های VIP</li>
-          <li>دسترسی به آیتم‌های نادر و ویژه</li>
-          <li>امکان استفاده از قابلیت‌های مدیریتی</li>
-          <li>دعوت دوستان با جوایز ویژه</li>
-        </ul>
-      </div>
-    </div>
+    <div class="rank-box" onclick="toggleDetails('elite')">🟣 Elite - 200,000 تومان</div>
+    <div class="details" id="elite">دسترسی کامل به امکانات ویژه و نقش مدیریتی.</div>
 
-    <p style="margin-top: 30px; font-weight: 700; color: #ffb347;">
-      برای خرید رنک‌ها به <a href="https://t.me/off_tor" target="_blank" rel="noopener noreferrer">@off_tor</a> در تلگرام پیام دهید.
-    </p>
-  </main>
-  <footer>© 2025 LavaCraft</footer>
+    <div class="rank-box" onclick="toggleDetails('legend')">🔴 Legend - 500,000 تومان</div>
+    <div class="details" id="legend">ویژگی‌های کامل، شخصی‌سازی و دسترسی ویژه در سرور.</div>
+
+    <p>📩 برای خرید، به آیدی تلگرام زیر پیام دهید:</p>
+    <strong>@off_tor</strong>
+
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === "none") ? "block" : "none";
+        }
+    </script>
 </body>
-
 </html>
