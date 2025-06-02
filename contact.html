@@ -20,108 +20,61 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
     }
 
     header {
       background: linear-gradient(90deg, #ff6b6b, #f0932b);
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      padding: 25px 20px;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ff6b6bcc;
+      margin-bottom: 40px;
+      user-select: none;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       font-weight: 700;
-      letter-spacing: 2px;
-      text-shadow: 0 0 5px #fff3b0;
+      color: #fff;
+      text-shadow: 0 0 12px #fff3b0;
     }
 
-    main {
-      flex-grow: 1;
-      padding: 40px 20px 60px;
+    main p {
+      font-size: 1.3rem;
+      line-height: 1.6;
       max-width: 480px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      align-items: center;
-      text-align: center;
-    }
-
-    .support-box {
-      background: #292929;
-      padding: 25px 30px;
-      border-radius: 14px;
-      box-shadow: 0 0 15px #f0932bcc;
-      font-size: 1.3rem;
-      max-width: 100%;
-      width: 100%;
-      color: #ddd;
+      padding: 0 10px;
+      color: #ffb347;
       user-select: text;
-      line-height: 1.6;
-      letter-spacing: 0.3px;
     }
 
-    .support-link {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 35px;
-      font-size: 1.5rem;
+    main a {
+      color: #fff;
+      text-decoration: underline;
       font-weight: 700;
-      color: #1a1a1a;
-      background: linear-gradient(90deg, #ff6b6b, #f0932b);
-      border-radius: 14px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.7);
-      transition: background 0.35s ease, box-shadow 0.35s ease;
-      user-select: none;
-      letter-spacing: 0.3px;
-    }
-
-    .support-link:hover,
-    .support-link:focus-visible {
-      background: linear-gradient(90deg, #f0932b, #ff6b6b);
-      box-shadow: 0 6px 20px rgba(240, 147, 43, 0.85);
-    }
-
-    nav a {
-      color: #f2f2f2;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover,
-    nav a:focus-visible {
-      color: #f0932b;
     }
 
     footer {
-      background: #121212;
-      text-align: center;
-      padding: 18px 10px;
-      font-size: 0.9rem;
-      color: #777;
-      user-select: none;
-      border-top: 1px solid #2c2c2c;
       margin-top: auto;
+      font-size: 0.9rem;
+      color: #bbb;
+      user-select: none;
+      padding-bottom: 15px;
     }
 
-    /* Responsive */
     @media (max-width: 480px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
       }
 
-      .support-box {
+      main p {
         font-size: 1.1rem;
-        padding: 20px 20px;
-      }
-
-      .support-link {
-        font-size: 1.3rem;
-        padding: 12px 25px;
       }
     }
   </style>
@@ -131,22 +84,11 @@
   <header>
     <h1>پشتیبانی LavaCraft</h1>
   </header>
-
   <main>
-    <div class="support-box">
-      این گروه رسمی سرور ماست. برای پشتیبانی و دریافت کمک لطفاً وارد گروه زیر شوید:
-      <br /><br />
-      <nav>
-        <a href="https://t.me/+Gg9kDNTY-8YxM2E0" target="_blank" rel="noopener noreferrer" class="support-link">
-          🔗 گروه پشتیبانی LavaCraft
-        </a>
-      </nav>
-    </div>
+    <p>برای پشتیبانی و پرسش سوالات خود، لطفاً به گروه سرور ما در تلگرام مراجعه کنید:</p>
+    <p><a href="https://t.me/+Gg9kDNTY-8YxM2E0" target="_blank" rel="noopener noreferrer">https://t.me/+Gg9kDNTY-8YxM2E0</a></p>
   </main>
-
-  <footer>
-    © 2025 LavaCraft
-  </footer>
+  <footer>© 2025 LavaCraft</footer>
 </body>
 
 </html>
