@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,10 +11,11 @@
     * {
       box-sizing: border-box;
     }
+
     body {
       margin: 0;
       font-family: 'Vazirmatn', Tahoma, sans-serif;
-      background: #121212;
+      background: #1a1a1a;
       color: #eee;
       min-height: 100vh;
       padding: 40px 20px;
@@ -21,7 +23,9 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      user-select: none;
     }
+
     header {
       background: linear-gradient(90deg, #ff6b6b, #f0932b);
       padding: 25px 20px;
@@ -30,19 +34,22 @@
       border-radius: 20px;
       box-shadow: 0 0 20px #ff6b6bcc;
       margin-bottom: 40px;
-      user-select: none;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       font-weight: 700;
       color: #fff;
       text-shadow: 0 0 12px #fff3b0;
     }
+
     main {
       width: 100%;
       max-width: 480px;
+      user-select: text;
     }
+
     .rank-container {
       margin-bottom: 20px;
       border-radius: 15px;
@@ -50,55 +57,72 @@
       background: #222;
       box-shadow: 0 0 15px #000000bb;
       cursor: pointer;
-      user-select: none;
       border: 3px solid transparent;
       transition: border-color 0.3s ease;
+      user-select: none;
     }
+
     .rank-container:hover {
       border-color: #fff;
     }
+
     .rank-title {
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 8px;
+      user-select: text;
     }
+
     .price {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: #ffd700;
       margin-bottom: 8px;
+      user-select: text;
     }
+
     .features {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #ccc;
       display: none;
       text-align: right;
-      line-height: 1.5;
+      line-height: 1.6;
+      user-select: text;
     }
 
     /* رنگ حاشیه RGB برای هر رنک */
     .elite {
       border-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3) 1;
     }
+
     .mvp {
       border-image: linear-gradient(45deg, #00ffff, #007fff, #0000ff, #7f00ff, #ff00ff) 1;
     }
+
     .vip {
       border-image: linear-gradient(45deg, #ff1493, #ff69b4, #ffc0cb) 1;
     }
+
     .legend {
       border-image: linear-gradient(45deg, #00ff00, #7fff00, #ffff00) 1;
     }
 
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.9rem;
+      body {
+        padding: 30px 15px;
       }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
       .rank-title {
         font-size: 1.4rem;
       }
+
       .price {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
       }
+
       .features {
         font-size: 1rem;
       }
@@ -115,6 +139,7 @@
     }
   </script>
 </head>
+
 <body>
   <header>
     <h1>رنک‌های LavaCraft</h1>
@@ -177,4 +202,5 @@
   </main>
   <footer>© 2025 LavaCraft</footer>
 </body>
+
 </html>
